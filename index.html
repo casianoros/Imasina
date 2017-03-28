@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Imasina.ro</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="CSS/Style.css">
+    <meta charset="utf-8">
+  </head>
+  <body>
+	  	<nav>
+	  		<ul>
+	  			<div>
+		  			<li><a href="index.html"><img src="Image/logo.png" class="logo"></a></li>
+		  			<li><h5 id="userNameChange">User</h5></li>
+		  			<li><a href="#"><img src="Image/Flag_of_Romania.svg.png" class="languageFlag"></a></li>
+	  			</div>
+	  			<div>
+		  			<button class="buttonStyle" id="accountButton">my account</button>
+		  			<button class="buttonStyle">About us</button>
+	  			</div>
+	  		</ul>
+	  	</nav>
+	  	
+	  	<div class="firstMenu" id="lblLogin" style="display: none;">
+	  		<div class="centeringBox">
+	  			<div class="lblLoginBox">
+	  				<div class="centeringBox">
+
+	  					<div class="centeringModelInput" id="loginChoser">
+	  						<button class="buttonStyle" id="btnOpenLogin">Login</button>
+	  						<br>
+	  						<button class="buttonStyleRed" id="btnOpenRegister">Register</button>
+	  					</div>
+
+
+	  					<div class="centeringModelInput" id="lblRegisterInputOne" style="display: none">
+	  						<h4>Register</h4><br>
+	  						<p>First Name</p>
+	  						<input class="inputStyle" id="txtUserInput" type="text" placeholder="Casian">
+	  						<p>Last Name</p>
+	  						<input class="inputStyle" id="txtUserInput" type="text" placeholder="Oros">
+	  						<p>Email adress</p>
+	  						<input class="inputStyle" id="txtUserInput" type="text" placeholder="example@kea.dk">
+	  						<p>Adress</p>
+	  						<input class="inputStyle" id="txtUserInput" type="text" placeholder="Ramlosevej 32">
+	  						<br>
+	  						<button class="smButtonStyle" id="backFromRegisterOrLogin">Back</button>
+	  					</div>
+
+	  					<div class="centeringModelInput" id="lblRegisterInputTwo" style="display: none"><br><br><br>
+	  						<p>City</p>
+	  						<input class="inputStyle" id="txtUserInput" type="text" placeholder="example@kea.dk">
+	  						<p>Country</p>
+	  						<select name="country" class="selectOption">
+								  <option value="romania">Romania</option>
+								  <option value="denmark">Denmark</option>
+								</select>
+	  						<p>Phone number</p>
+	  						<input class="inputStyle" id="txtUserInput" type="text" placeholder="44221421">
+	  						<p>Dealer YES/NO</p>
+	  						<input id="txtUserInput" type="checkbox">
+	  						<br>
+	  						<button class="buttonStyleRed">Register</button>
+	  					</div>
+
+	  					<div class="centeringModelInput" id="lblLoginBoxInputOne" style="display: none">
+	  						<button class="smButtonStyle" id="backFromRegisterOrLogin">Back</button>
+	  					</div>
+	  					<div class="centeringModelInput" id="lblLoginBoxInputTwo" style="display: none">
+	  						<h4>Login</h4>
+	  						<br>
+	  						<input class="inputStyle" id="txtUserNameLoginInput" type="text" placeholder="username">
+	  						<br>
+	  						<input class="inputStyle" id="txtUserPassLoginInput" type="text" placeholder="password">
+	  						<br>
+	  						<button class="smButtonStyle" id="runLogin">Login</button>
+	  					</div>
+
+	  				</div>
+	  			</div>
+	  		</div>
+	  	</div>
+
+	  	<div class="firstMenu" id="lblUser" style="display: none;">
+	  		<div class="centeringBox">
+	  			<div class="lblLoginBox">
+	  				<div class="centeringBox">
+
+	  					<div class="centeringModelInput" id="lblUserData" style="display: flex">
+	  						<h4>User</h4><br>
+	  						<p id="popFName">First Name</p>
+	  						<p id="popLName">Last Name</p>
+	  						<p id="popEmail">Email adress</p>
+	  						<p id="popAdress">Adress</p>
+	  						<br>
+	  						<button class="smButtonStyle" id="backFromUserData">Back</button>
+	  					</div>
+
+	  					<div class="centeringModelInput" id="lblUserHide">
+	  						<br>
+	  						<button class="buttonStyleRed" id="btnAddCar" onclick="notifyMe()">Add Car</button>
+	  					</div>
+
+
+
+
+
+	  					<div class="centeringModelInput" id="lblUserAddCarOne" style="display: none">
+
+					  					<h5 class="topText">Car mark</h5>
+											<select name="carMark" class="selectOption" id="getPostMark">
+												<option value="all">all</option>
+											  <option value="volvo">Volvo</option>
+											  <option value="saab">Saab</option>
+											  <option value="fiat">Fiat</option>
+											  <option value="audi">Audi</option>
+											</select>
+
+											<h5>Car model</h5>
+											<select name="carModel" class="selectOption" id="getPostModel">
+												<option value="all">all</option>
+											  <option value="a4">A4</option>
+											</select>
+
+											<h5>Transmission</h5>
+											<select name="transmisionModel" class="selectOption" id="getPostTransmission">
+												<option value="all">all</option>
+											  <option value="automatic">Automatic</option>
+											  <option value="manual">Manual</option>
+											  <option value="semiautomatic">Semi-automatic</option>
+											</select>
+
+
+					  					<h5 class="topText">Fuel</h5>
+											<select name="fuel" class="selectOption" id="getPostFuel">
+						  					<option value="all">all</option>
+											  <option value="diesel">Diesel</option>
+											  <option value="petrol">Petrol</option>
+											</select>
+
+											<h5>Adress</h5>
+											<input type="text" class="selectOption" id="getPostAdress">
+											<br>
+											<button id="btnBackToUserDetail" class="smButtonStyle">Back</button>
+		  				</div>
+
+
+
+		  				<div class="centeringModelInput" id="lblUserAddCarTwo" style="display: none">
+
+								<h5>Description</h5>
+								<textarea style="height:200px;" id="getPostDescription"></textarea>
+								<canvas></canvas>
+		  				</div>
+
+
+
+
+
+
+		  				<div class="centeringModelInput" id="lblUserAddCarThree" style="display: none">
+
+								<h5>Car Photo</h5>
+								<input id="getPostPicture" type='file' class="selectOption">
+								<img id="img" height="150">
+								<div class="dualInput">
+									<div class="justifyContent">
+										<h5>Price</h5>
+										<input type="text" class="selectSmallOption" id="getPostPrice">
+									</div>
+
+									<div class="justifyContent">
+										<h5>Km </h5>
+										<input type="text" class="selectSmallOption" id="getPostKm">
+									</div>
+								</div>
+								<br>
+	  						<button class="buttonStyleRed" id="btnPostCar">Post Car</button>
+
+		  				</div>
+
+
+
+
+
+	  				</div>
+	  			</div>
+	  		</div>
+	  	</div>
+	  </div>
+
+
+	  	<div class="firstMenu" id="lblFirstMenu">
+	  		<div class="centeringBox">
+	  			<div class="searchMenu">
+	  				<div class="centeringModel">
+		  				<button class="seachModel" id="carSearchTab">Car</button>
+		  				<button class="seachModel" id="motoSeachTab">Moto</button>
+		  				<button class="seachModel" id="busSearchTab">Bus</button>
+		  				<button class="seachModel" id="othersSearchTab">Others</button>
+	  				</div>
+		  			<div class="inputSearchModel" id="carSearch" style="display: none;">
+		  				<div class="centeringModelInput">
+
+		  					<h5 class="topText">Car mark</h5>
+								<select name="carMark" class="selectOption" id="getSearchMark">
+									<option value="all">all</option>
+								  <option value="volvo">Volvo</option>
+								  <option value="saab">Saab</option>
+								  <option value="fiat">Fiat</option>
+								  <option value="audi">Audi</option>
+								</select>
+
+								<h5>Car model</h5>
+								<select name="carModel" class="selectOption" id="getSearchModel">
+									<option value="all">all</option>
+								  <option value="a4">A4</option>
+								</select>
+
+								<h5>Transmision</h5 id="getSearchTransmission">
+								<select name="transmisionModel" class="selectOption" id="getSearchTransmission">
+									<option value="all">all</option>
+								  <option value="automatic">Automatic</option>
+								  <option value="manual">Manual</option>
+								  <option value="semiautomatic">Semi-automatic</option>
+								</select>
+		  				</div>
+
+		  				<div class="centeringModelInput">
+		  					<h5 class="topText">Fuel</h5>
+		  					<select name="fuel" class="selectOption" id="getSearchFuel">
+			  					<option value="all">all</option>
+								  <option value="diesel">Diesel</option>
+								  <option value="petrol">Petrol</option>
+								</select>
+
+								<div class="dualInput">
+									<div class="justifyContent">
+										<h5>Price from</h5>
+										<select name="priceFrom" class="selectSmallOption" id="getSearchPriceFrom">
+											<option value="all">all</option>
+										  <option value="500">500</option>
+										  <option value="1500">1500</option>
+										  <option value="2000">2000</option>
+										  <option value="2500">2500</option>
+										  <option value="3000">3000</option>
+										  <option value="3500">3500</option>
+										</select>
+									</div>
+
+									<div class="justifyContent">
+										<h5>Price to</h5>
+										<select name="priceTo" class="selectSmallOption" id="getSearchPriceUntil">
+											<option value="all">all</option>		
+										  <option value="500">500</option>
+										  <option value="1500">1500</option>
+										  <option value="2000">2000</option>
+										  <option value="2500">2500</option>
+										  <option value="3000">3000</option>
+										  <option value="3500">3500</option>
+										</select>
+									</div>
+								</div>
+
+								<div class="dualInput">
+									<div class="justifyContent">
+										<h5>Km from</h5>
+										<select name="kmFrom" class="selectSmallOption" id="getSearchKmFrom">
+											<option value="all">all</option>
+										  <option value="500">500 - km</option>
+										  <option value="1500">1500 - km</option>
+										  <option value="20000">20000 - km</option>
+										  <option value="25000">25000 - km</option>
+										  <option value="100000">100000 - km</option>
+										  <option value="150000">150000 - km</option>
+										</select>
+									</div>
+
+									<div class="justifyContent">
+										<h5>Km to</h5>
+										<select name="kmTo" class="selectSmallOption" id="getSearchKmUntil">
+											<option value="all">all</option>
+										  <option value="500">500 - km</option>
+										  <option value="1500">1500 - km</option>
+										  <option value="20000">20000 - km</option>
+										  <option value="25000">25000 - km</option>
+										  <option value="100000">100000 - km</option>
+										  <option value="150000">150000 - km</option>
+										</select>
+									</div>
+								</div>
+
+		  				</div>
+
+
+		  				
+
+		  				<div class="centeringModelSmall">
+		  					<div class="marginBottom">
+		  						<button class="buttonStyle" id="btnSearchCar">Search</button>
+		  					</div>
+		  				</div>
+
+
+
+
+
+		  			</div>
+	  			</div>
+	  			
+	  			<div class="buyMenu">
+	  				<p class="bigP">Join us and sell your car</p>
+	  				<h3 class="bigH3"style="margin:0px;">FOR JUST</h3>
+	  				<div class="centeringSmallBox">
+		  				<h1 class="maPrice bigH1">9,99</h1>
+		  				<h3 class="bigH3">EURO</h3>
+	  				</div>
+	  				<p class="bigP">Join now</p>
+	  				<button class="buttonStyleRed marginTop" id="displayLogin">Add new car</button>
+	  			</div>
+
+	  		</div>
+	  	</div>
+
+	  	<div class="separator" id="lblSeparatorOne"> 
+	  		<div>
+	  			<h4 class="maxi">Promoted Ads</h4>
+	  			<p class="medi">From your city</p>
+	  		</div>
+	  	</div>
+
+	  	<div class="map" id="lblMap">
+	    	<div id="map"></div>
+	    </div>
+
+	    <div class="separator" id="lblSeparatorTwo"> 
+	  		<div>
+	  			<h4 class="maxi">Promoted Ads</h4>
+	  			<p class="medi">From Romania</p>
+	  		</div>
+	  	</div>
+
+
+
+
+	  	<div class="secondMenu" id="lblSecondMenu">
+	  		<div class="centeringListBox">
+	  			
+	  			<a href="#">
+		  			<div class="mediumAnnounce">
+		  				<div class="maSeparatorImage"> 
+		  					<img src="Image/bmw.jpg" class="mediumImageScale">
+		  				</div>
+		  				<div class="maSeparatorText">
+		  					<h4 class="maTitle">BMW 335D</h4>
+		  					<p class="maSecondTitle">Automatic, 2994cc</p>
+		  					<p class="maDescription">Remapat la 380 de cai, soft WPP are jante pe 19 si semi slick.</p>
+		  					<h4 class="maPrice">28,999 €</h4>
+		  				</div>
+		  			</div>
+		  		</a>
+		  		<a href="#">
+		  			<div class="mediumAnnounce">
+		  				<div class="maSeparatorImage"> 
+		  					<img src="Image/pejo.jpg" class="mediumImageScale">
+		  				</div>
+		  				<div class="maSeparatorText">
+		  					<h4 class="maTitle">Peugeot 607 2.2 hdi</h4>
+		  					<p class="maSecondTitle">Automatic, 2194cc</p>
+		  					<p class="maDescription">Injrijita, are carte technica schimburi facute doar la reprezentanta</p>
+		  					<h4 class="maPrice">5,999 €</h4>
+		  				</div>
+		  			</div>
+		  		</a>
+		  		<a href="#">
+		  			<div class="mediumAnnounce">
+		  				<div class="maSeparatorImage"> 
+		  					<img src="Image/bmw.jpg" class="mediumImageScale">
+		  				</div>
+		  				<div class="maSeparatorText">
+		  					<h4 class="maTitle">BMW 335D</h4>
+		  					<p class="maSecondTitle">Automatic, 2994cc</p>
+		  					<p class="maDescription">Remapat la 380 de cai, soft WPP are jante pe 19 si semi slick.</p>
+		  					<h4 class="maPrice">28,999 €</h4>
+		  				</div>
+		  			</div>
+		  		</a>
+		  		<a href="#">
+		  			<div class="mediumAnnounce">
+		  				<div class="maSeparatorImage"> 
+		  					<img src="Image/pejo.jpg" class="mediumImageScale">
+		  				</div>
+		  				<div class="maSeparatorText">
+		  					<h4 class="maTitle">Peugeot 607 2.2 hdi</h4>
+		  					<p class="maSecondTitle">Automatic, 2194cc</p>
+		  					<p class="maDescription">Injrijita, are carte technica schimburi facute doar la reprezentanta</p>
+		  					<h4 class="maPrice">5,999 €</h4>
+		  				</div>
+		  			</div>
+		  		</a>
+		  		<a href="#">
+		  			<div class="mediumAnnounce">
+		  				<div class="maSeparatorImage"> 
+		  					<img src="Image/bmw.jpg" class="mediumImageScale">
+		  				</div>
+		  				<div class="maSeparatorText">
+		  					<h4 class="maTitle">BMW 335D</h4>
+		  					<p class="maSecondTitle">Automatic, 2994cc</p>
+		  					<p class="maDescription">Remapat la 380 de cai, soft WPP are jante pe 19 si semi slick.</p>
+		  					<h4 class="maPrice">28,999 €</h4>
+		  				</div>
+		  			</div>
+		  		</a>
+		  		<a href="#">
+		  			<div class="mediumAnnounce">
+		  				<div class="maSeparatorImage"> 
+		  					<img src="Image/pejo.jpg" class="mediumImageScale">
+		  				</div>
+		  				<div class="maSeparatorText">
+		  					<h4 class="maTitle">Peugeot 607 2.2 hdi</h4>
+		  					<p class="maSecondTitle">Automatic, 2194cc</p>
+		  					<p class="maDescription">Injrijita, are carte technica schimburi facute doar la reprezentanta</p>
+		  					<h4 class="maPrice">5,999 €</h4>
+		  				</div>
+		  			</div>
+		  		</a>
+
+	  		</div>
+	  	</div>
+
+
+
+
+
+	  	<div class="separator" id="lblSeparatorThree"> 
+	  		<div>
+	  			<button class="smButtonStyle">Check all promoted ads</button>
+	  		</div>
+	  	</div>
+
+	  	<div class="thirdMenu" id="lblThirdMenu">
+	  		<h4 class="maxi overBlack">Top Dealers</h4>
+	  		<p class="medi overBlack">From Romania</p>
+	  	</div>
+
+	  	<div class="firstCarousel" id="lblFirstCarousel">
+		  	<div class='wrap'>
+				  <ul class='carousel is-set'>
+				    <li class='carousel-seat'>
+				    	<a href="#">
+					    	<img src="Image/Honda.jpg" class="carouselImg">
+					      <h2 class="maPrice">Honda Center</h2>
+				     	</a>
+				    </li>
+				    <li class='carousel-seat'>
+				    	<a href="#">
+					    	<img src="Image/img1.jpg" class="carouselImg">
+					      <h2 class="maPrice">Royalauto</h2>
+				      </a>
+				    </li>
+				    <li class='carousel-seat'>
+				    	<a href="#">
+					    	<img src="Image/img2.jpg" class="carouselImg">
+					      <h2 class="maPrice">TopCar</h2>
+				      </a>
+				    </li>
+				    <li class='carousel-seat'>
+				    	<a href="#">
+					    	<img src="Image/img3.jpg" class="carouselImg">
+					      <h2 class="maPrice">Bmw-Motors</h2>
+				      </a>
+				    </li>
+				    <li class='carousel-seat'>
+				    	<a href="#">
+					    	<img src="Image/Honda.jpg" class="carouselImg">
+					      <h2 class="maPrice">Honda Center</h2>
+				     	</a>
+				    </li>
+				    <li class='carousel-seat'>
+				    	<a href="#">
+					    	<img src="Image/img1.jpg" class="carouselImg">
+					      <h2 class="maPrice">Royalauto</h2>
+				      </a>
+				    </li>
+				    <li class='carousel-seat'>
+				    	<a href="#">
+					    	<img src="Image/img2.jpg" class="carouselImg">
+					      <h2 class="maPrice">TopCar</h2>
+				      </a>
+				    </li>
+				    <li class='carousel-seat'>
+				    	<a href="#">
+					    	<img src="Image/img3.jpg" class="carouselImg">
+					      <h2 class="maPrice">Bmw-Motors</h2>
+				      </a>
+				    </li>
+				    <li class='carousel-seat'>
+				    	<a href="#">
+					    	<img src="Image/Honda.jpg" class="carouselImg">
+					      <h2 class="maPrice">Honda Center</h2>
+				     	</a>
+				    </li>
+				    <li class='carousel-seat'>
+				    	<a href="#">
+					    	<img src="Image/img1.jpg" class="carouselImg">
+					      <h2 class="maPrice">Royalauto</h2>
+				      </a>
+				    </li>
+				    <li class='carousel-seat'>
+				    	<a href="#">
+					    	<img src="Image/img2.jpg" class="carouselImg">
+					      <h2 class="maPrice">TopCar</h2>
+				      </a>
+				    </li>
+				    <li class='carousel-seat'>
+				    	<a href="#">
+					    	<img src="Image/img3.jpg" class="carouselImg">
+					      <h2 class="maPrice">Bmw-Motors</h2>
+				      </a>
+				    </li>
+				  </ul>
+				</div>
+			</div>
+
+			<div class='controls' id="lblControls">
+			  <button class='toggle smButtonStyle'>Prev</button>
+			  <button class='toggle smButtonStyle' data-toggle='next'>Next</button>
+			</div>
+
+			<div class="fourthMenu" id="lblFourthMenu">
+				<div class="centeringListBox">
+					<div class="dealerDisplay">
+						<div class="first">
+							<div class="dDSeparatorImage"> 
+		  					<img src="Image/Honda.jpg" class="largeImageScale">
+		  				</div>
+		  				<div class="dDSeparatorText">
+		  					<h4 class="maTitle">Honda center</h4>
+		  					<p class="maSecondTitle">Constanta, Romania</p>
+		  					<p class="maDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus id fringilla ex. Quisque libero justo, sollicitudin sollicitudin sem ut, rhoncus pretium risus. Proin mauris elit, laoreet at nunc eu, tristique tincidunt ligula. Suspendisse quis elit lacus. Cras eget imperdiet ante. Suspendisse potenti. Morbi vitae venenatis ligula. Cras posuere vulputate felis, vel aliquam eros tempus sed. Cras sagittis efficitur elit sit amet eleifend. Nulla ullamcorper varius sem at placerat. Phasellus sodales, ligula ut dictum vestibulum, velit eros mollis purus, vitae euismod risus magna in enim. Sed molestie magna sit amet volutpat interdum. Suspendisse varius eros nec mollis sollicitudin. Maecenas neque lorem, suscipit id arcu id, luctus sagittis augue.</p>
+		  					<div class="marginTop">
+		  						<button class='smButtonStyle green'>Contact</button>
+			  					<button class='smButtonStyle'>Navigation</button>
+		  					</div>
+		  				</div>
+						</div>
+						<div class="second">
+							
+							<div class='wrap'>
+							  <ul class='carousel is-set'>
+							    <li class='carousel-seat'>
+							    	<a href="#">
+								    	<img src="Image/pejo.jpg" class="carouselMinImg">
+								      <h5 class="maPrice">Peugeot 607 2.2 hdi</h5>
+							      </a>
+							    </li>
+							    <li class='carousel-seat'>
+							    	<a href="#">
+								    	<img src="Image/bmw.jpg" class="carouselMinImg">
+								      <h5 class="maPrice">BMW 335D</h5>
+							      </a>
+							    </li>
+							    <li class='carousel-seat'>
+							    	<a href="#">
+								    	<img src="Image/pejo.jpg" class="carouselMinImg">
+								      <h5 class="maPrice">Peugeot 607 2.2 hdi</h5>
+							      </a>
+							    </li>
+							    <li class='carousel-seat'>
+							    	<a href="#">
+								    	<img src="Image/bmw.jpg" class="carouselMinImg">
+								      <h5 class="maPrice">BMW 335D</h5>
+							      </a>
+							    </li>
+							    <li class='carousel-seat'>
+							    	<a href="#">
+								    	<img src="Image/pejo.jpg" class="carouselMinImg">
+								      <h5 class="maPrice">Peugeot 607 2.2 hdi</h5>
+							      </a>
+							    </li>
+							    <li class='carousel-seat'>
+							    	<a href="#">
+								    	<img src="Image/bmw.jpg" class="carouselMinImg">
+								      <h5 class="maPrice">BMW 335D</h5>
+							      </a>
+							    </li>
+							    <li class='carousel-seat'>
+							    	<a href="#">
+								    	<img src="Image/pejo.jpg" class="carouselMinImg">
+								      <h5 class="maPrice">Peugeot 607 2.2 hdi</h5>
+							      </a>
+							    </li>
+							    <li class='carousel-seat'>
+							    	<a href="#">
+								    	<img src="Image/bmw.jpg" class="carouselMinImg">
+								      <h5 class="maPrice">BMW 335D</h5>
+							      </a>
+							    </li>
+							    <li class='carousel-seat'>
+							    	<a href="#">
+								    	<img src="Image/pejo.jpg" class="carouselMinImg">
+								      <h5 class="maPrice">Peugeot 607 2.2 hdi</h5>
+							      </a>
+							    </li>
+							    <li class='carousel-seat'>
+							    	<a href="#">
+								    	<img src="Image/bmw.jpg" class="carouselMinImg">
+								      <h5 class="maPrice">BMW 335D</h5>
+							      </a>
+							    </li>
+							  </ul>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="separator" id="lblSeparatorFour">
+				<button class='smButtonStyle'>Checkout all dealers</button>
+			</div>
+
+			<footer>
+				<div class="footerContainer">
+					<h2>Find us on:</h2>
+					<div class="socialMedia">
+						<a href="#"><img src="Image/fb.png" class="smallImg"></a>
+						<a href="#"><img src="Image/insta.png" class="smallImg"></a>
+					</div>
+				</div>
+				<div class="footerCenterContainer">
+					<h2>With respect team Imasina.ro</h2>
+					<div class="centerFooter">
+						<p>Urgent assistance: 45 45 22 13</p>
+						<p>urgentAssistImasina@Imasina.ro</p>
+					</div>
+				</div>
+				<div class="footerContainer">
+					<h2>Offers</h2>
+					<a href="#"><p>Prices</p></a>
+					<a href="#"><p>Selling contract</p></a>
+					<a href="#"><p>Selling banner</p></a>
+				</div>
+			</footer>
+
+	</body>
+
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGbjiZrmDQb01scZIUSx6vmszEXVz4QA4&callback=initMap"></script>
+    
+
+    <script>
+      var aOfTemporaryCars = [];
+      function initMap() {
+
+      	var myLatLng = {lat: 47.7953339, lng: 22.88411};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 45.943161, lng: 24.96676},
+          zoom: 12,
+          scrollwheel: false
+        });
+        var infoWindow = new google.maps.InfoWindow({map: map});
+
+    //     var marker = new google.maps.Marker({
+		  //   position: myLatLng,
+		  //   map: map,
+		  //   title: 'Hello World!'
+	 	 // });
+
+    //     marker.setMap(map);
+
+        var markers=[];
+				var contents = [];
+				var infowindows = [];
+
+					for (i = 0; i < aOfTemporaryCars.length; i++) { 
+
+					    markers[i] = new google.maps.Marker({
+					      position: new google.maps.LatLng(aOfTemporaryCars[i].cordonatesLat, aOfTemporaryCars[i].cordonatesLng),
+					      map: map,
+					      title: aOfTemporaryCars[i].mark
+					    });
+					     markers[i].index = i;
+					    contents[i] = '<div class="mediumAnnounce"><div class="maSeparatorImage"><img src="Image/pejo.jpg" class="mediumImageScale"></div><div class="maSeparatorText"><h4 class="maTitle">'+aOfTemporaryCars[i].mark+' '+aOfTemporaryCars[i].model+'</h4><p class="maSecondTitle">'+aOfTemporaryCars[i].transmission+' '+aOfTemporaryCars[i].fuel+'</p><p class="maDescription">'+aOfTemporaryCars[i].description+'</p><h4 class="maPrice">'+aOfTemporaryCars[i].price+'</h4></div></div>';
+
+
+					    infowindows[i] = new google.maps.InfoWindow({
+					    content: contents[i],
+					    maxWidth: 300
+					    });
+
+					    google.maps.event.addListener(markers[i], 'click', function() {
+					            console.log(this.index); // this will give correct index
+					            console.log(i); //this will always give 10 for you
+					            infowindows[this.index].open(map,markers[this.index]);
+					            map.panTo(markers[this.index].getPosition());
+					    });  
+					};
+        
+        //Map adres to location
+        // https://maps.googleapis.com/maps/api/geocode/json?address=Romania&key=AIzaSyCGbjiZrmDQb01scZIUSx6vmszEXVz4QA4
+
+        // Try HTML5 geolocation.
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function(position) {
+            var pos = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude
+            };
+
+            map.setCenter(pos);
+            infoWindow.setPosition(pos);
+            infoWindow.setContent('This is your town');
+            map.setCenter(pos);
+          }, function() {
+            handleLocationError(true, infoWindow, map.getCenter());
+          });
+        } else {
+          // Browser doesn't support Geolocation
+          handleLocationError(false, infoWindow, map.getCenter());
+        }
+      }
+
+      function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+        infoWindow.setPosition(pos);
+        infoWindow.setContent(browserHasGeolocation ?
+                              'Error: The Geolocation service failed.' :
+                              'Error: Your browser doesn\'t support geolocation.');
+      }
+
+      // Desktop Notification
+
+
+      function notifyMe() {
+			  if (!("Notification" in window)) {
+			    alert("This browser does not support desktop notification");
+			  }
+			  else if (Notification.permission === "granted") {
+			  var options = {
+			        body: "Good luck selling the car",
+			        icon: "Image/firstMenu2.png",
+			        dir : "ltr"
+			    };
+			  var notification = new Notification("Imasina.ro",options);
+			  }
+			  else if (Notification.permission !== 'denied') {
+			    Notification.requestPermission(function (permission) {
+			      if (!('permission' in Notification)) {
+			        Notification.permission = permission;
+			      }
+
+			      if (permission === "granted") {
+			        var options = {
+			              body: "Good luck selling the car",
+			              icon: "Image/firstMenu2.png",
+			              dir : "ltr"
+			          };
+			        var notification = new Notification("Imasina.ro",options);
+			      }
+			    });
+			  }
+			}
+
+
+      // Carousel
+
+      (function() {
+			  var carousel, next, prev, seats;
+
+			  carousel = $('.carousel');
+			  seats = $('.carousel-seat');
+
+			  next = function(el) {
+			    if (el.next().length > 0) {
+			      return el.next();
+			    } else {
+			      return seats.first();
+			    }
+			  };
+
+			  prev = function(el) {
+			    if (el.prev().length > 0) {
+			      return el.prev();
+			    } else {
+			      return seats.last();
+			    }
+			  };
+
+			  $('.toggle').on('click', function(e) {
+			    var el, i, j, new_seat, ref;
+			    el = $('.is-ref').removeClass('is-ref');
+			    if ($(e.currentTarget).data('toggle') === 'next') {
+			      new_seat = next(el);
+			      carousel.removeClass('is-reversing');
+			    } else {
+			      new_seat = prev(el);
+			      carousel.addClass('is-reversing');
+			    }
+			    new_seat.addClass('is-ref').css('order', 1);
+			    for (i = j = 2, ref = seats.length; 2 <= ref ? j <= ref : j >= ref; i = 2 <= ref ? ++j : --j) {
+			      new_seat = next(new_seat).css('order', i);
+			    }
+			    carousel.removeClass('is-set');
+			    return setTimeout((function() {
+			      return carousel.addClass('is-set');
+			    }), 50);
+			  });
+
+			}).call(this);
+
+      function hideElements (array){
+      	for(var i = 0; i < array.length; i++){
+      		// console.log("'array[i]'");
+      		$("#"+array[i]).hide();
+      		// Hide by class ------ ---- ----- ------
+      	}
+      }
+
+      function showElements (array){
+      	for(var i = 0; i < array.length; i++){
+      		// console.log("'array[i]'");
+      		$("#"+array[i]).show();
+      		// Show by class ------ ---- ----- ------
+      	}
+      }
+
+      function onClickHideAndShow (firstArray,secondArray){
+      	showElements(firstArray);
+      	hideElements(secondArray);
+      }
+
+      var audio = new Audio("MP3/Launch.mp3");
+      // audio.play();
+
+
+
+
+      var imageText;
+      // Image Upploader
+      function readFile() {
+			  if (this.files && this.files[0]) {
+			    var FR= new FileReader();
+			    FR.onload = function(e) {
+			      document.getElementById("img").src= e.target.result;
+			      imageText = e.target.result;
+			    };       
+			    FR.readAsDataURL( this.files[0] );
+			  }
+			}
+			document.getElementById("getPostPicture").addEventListener("change", readFile, false);
+
+
+			function appendCars(array){
+				// console.log(array);
+				$("#lblSecondMenu").html(" ");
+				for(var i = 0; i < array.length ; i++){
+					$("#lblSecondMenu").append("<div class='centeringListBox'><a href='#'><div class='mediumAnnounce'><div class='maSeparatorImage'> <img src='Image/pejo.jpg' class='mediumImageScale'></div><div class='maSeparatorText'><h4 class='maTitle'>" + array[i].mark + " " + array[i].model + "</h4><p class='maSecondTitle'>" + array[i].transmission + ", " + array[i].fuel + "</p><p class='maSecondTitle'>" + array[i].adress + "</p><p class='maDescription'>" + array[i].description + "</p><h4 class='maPrice'>" + array[i].price + "</h4></div></div></a></div></div>");
+				};
+			};
+			var tempPosition;
+			var tempArray;
+			var tempI;
+			function searchLocation(array){
+				tempArray = array;
+				for(var i = 0; i < array.length ; i++){
+					tempI = i;
+					$.getJSON("https://maps.googleapis.com/maps/api/geocode/json?address="+array[i].adress+"&key=AIzaSyCGbjiZrmDQb01scZIUSx6vmszEXVz4QA4",function(jData){
+						tempPosition = jData.results[0].geometry.location;
+					}).done(function(jData){
+						tempArray[tempI].cordonatesLat = tempPosition.lat;
+						tempArray[tempI].cordonatesLng = tempPosition.lng;
+						// console.log(tempArray[tempI]);
+						run();
+						initMap();
+					});
+				}
+			}
+				
+			function run(){
+				aOfTemporaryCars = tempArray;
+				// console.log(aOfTemporaryCars);
+				appendCars(aOfTemporaryCars);
+			};
+
+
+			// ------ ---- ----- ----- <<<<<<< Reader >>>>>>>
+
+
+       var user;
+
+       function ReadUser(){
+	       $.getJSON("API/loggedIn.php", function(jData){
+	       		// $("#userNameChange").text(jData.name);
+	       		console.log(jData);
+	       		user = jData;
+	       		if(jData.status == "success"){
+	       			$("#userNameChange").text(user.fname);
+	       		}
+	       });
+       };
+       ReadUser();
+
+       function PopulateTheWeb(user){
+       	var temp;
+       	temp = $("#popFName").text();
+       	$("#popFName").empty();
+       	$("#popFName").text(temp+": "+user.fname);
+       	temp = $("#popLName").text();
+       	$("#popLName").empty();
+       	$("#popLName").text(temp+": "+user.lname);
+       	temp = $("#popAdress").text();
+       	$("#popAdress").empty();
+       	$("#popAdress").text(temp+": "+user.adress);
+       	temp = $("#popEmail").text();
+       	$("#popEmail").empty();
+       	$("#popEmail").text(temp+": "+user.email);
+       }
+
+       // ------ ---- ----- ----- <<<<<<< EVENTS >>>>>>> ------ ---- ----- ----------- ---- ----- ----- <<<<<<< EVENTS >>>>>>> ------ ---- ----- -----
+
+       $(document).on("click","#displayLogin", function(){
+       	var aEth = ["lblFirstMenu","lblMap","lblSeparatorOne","lblSecondMenu","lblThirdMenu","lblSeparatorTwo","lblSeparatorThree","lblSeparatorFour","lblFourthMenu"];
+       	var aEts = ["lblLogin"];
+       	onClickHideAndShow(aEts,aEth);
+       });
+       $(document).on("click","#btnOpenLogin",function(){
+       	if(localStorage.userlogged){
+	       	var aEth = ["lblLogin"];
+	       	var aEts = ["lblUser"];
+	       	onClickHideAndShow(aEts,aEth);
+       	}else{
+	       	var aEth = ["loginChoser"];
+	       	var aEts = ["lblLoginBoxInputOne","lblLoginBoxInputTwo"];
+	       	onClickHideAndShow(aEts,aEth);
+				}
+       });
+       $(document).on("click","#btnOpenRegister",function(){
+       	var aEth = ["loginChoser"];
+       	var aEts = ["lblRegisterInputOne","lblRegisterInputTwo"];
+       	onClickHideAndShow(aEts,aEth);
+       });
+       $(document).on("click","#backFromRegisterOrLogin",function(){
+       	var aEth = ["lblRegisterInputOne","lblRegisterInputTwo","lblLoginBoxInputOne","lblLoginBoxInputTwo"];
+       	var aEts = ["loginChoser"];
+       	onClickHideAndShow(aEts,aEth);
+       });
+       $(document).on("click","#backFromUserData",function(){
+       	var aEth = ["lblRegisterInputOne","lblRegisterInputTwo","lblLoginBoxInputOne","lblLoginBoxInputTwo","lblUser"];
+       	var aEts = ["lblLogin"];
+       	onClickHideAndShow(aEts,aEth);
+       });
+       $(document).on("click","#btnAddCar",function(){
+       	var aEth = ["lblUserHide","lblUserData"];
+       	var aEts = ["lblUser","lblUserAddCarTwo","lblUserAddCarOne","lblUserAddCarThree"];
+       	onClickHideAndShow(aEts,aEth);
+       })
+       $(document).on("click","#btnBackToUserDetail",function(){
+       	var aEth = ["lblUserAddCarTwo","lblUserAddCarOne","lblUserAddCarThree"];
+       	var aEts = ["lblUserHide","lblUserData"];
+       	onClickHideAndShow(aEts,aEth);
+       })
+
+
+       // ------ ---- ----- ----- <<<<<<< SearchModule >>>>>>> ------ ---- ----- ----------- ---- ----- ----- <<<<<<< SearchModule >>>>>>> ------ ---- ----- -----
+       $(document).on("click","#carSearchTab",function(){
+       	var aEth = [];
+       	var aEts = ["carSearch"];
+       	onClickHideAndShow(aEts,aEth);
+       });
+       $(document).on("click","#motoSeachTab",function(){
+       	var aEth = ["carSearch"];
+       	var aEts = [];
+       	onClickHideAndShow(aEts,aEth);
+       });
+       $(document).on("click","#busSearchTab",function(){
+       	var aEth = ["carSearch"];
+       	var aEts = [];
+       	onClickHideAndShow(aEts,aEth);
+       });
+       $(document).on("click","#othersSearchTab",function(){
+       	var aEth = ["carSearch"];
+       	var aEts = [];
+       	onClickHideAndShow(aEts,aEth);
+       });
+       $("#carSearchTab").trigger("click");
+       $("#carSearchTab").addClass("active");
+       // ------ ---- ----- ----- <<<<<<< SearchModule >>>>>>> ------ ---- ----- ----------- ---- ----- ----- <<<<<<< SearchModule >>>>>>> ------ ---- ----- -----
+
+
+
+
+       // ------ ---- ----- ----- <<<<<<< CarPost >>>>>>> ------ ---- ----- ----------- ---- ----- ----- <<<<<<< CarPost >>>>>>> ------ ---- ----- -----
+       $(document).on("click","#btnPostCar",function(){
+       	var jObject = {};
+       	jObject.id = new Date().getTime();
+       	jObject.owner = "Casian Oros";
+       	jObject.adress = $("#getPostAdress").val();
+       	jObject.cordonatesLng = "";
+       	jObject.cordonatesLat = "";
+       	jObject.mark =	$("#getPostMark").val();
+       	jObject.model = $("#getPostModel").val();
+       	jObject.transmission = $("#getPostTransmission").val();
+       	jObject.fuel = $("#getPostFuel").val();
+       	jObject.description = $("#getPostDescription").val();
+       	jObject.image = imageText;
+       	jObject.price = $("#getPostPrice").val();
+       	jObject.km = $("#getPostKm").val();
+       	var sObject = JSON.stringify(jObject);
+       	$.ajax({
+       		"url":"API/postCar.php",
+       		"method":"POST",
+       		"cache":false,
+       		"dataType":"TEXT",
+       		"data":"data="+sObject
+       	}).done(function(jData){
+       		console.log(jData);
+       	}).error(function(jData){
+       		console.log(jData);
+       	});
+       });
+       // ------ ---- ----- ----- <<<<<<< CarPost >>>>>>> ------ ---- ----- ----------- ---- ----- ----- <<<<<<< CarPost >>>>>>> ------ ---- ----- -----
+
+       // ------ ---- ----- ----- <<<<<<< CarSearch >>>>>>> ------ ---- ----- ----------- ---- ----- ----- <<<<<<< CarSearch >>>>>>> ------ ---- ----- -----
+       $(document).on("click","#btnSearchCar",function(){
+
+       	var aEth = ["lblControls","lblFirstCarousel","lblSeparatorOne","lblThirdMenu","lblSeparatorThree","lblSeparatorFour","lblFourthMenu"];
+       	var aEts = ["lblSecondMenu","lblMap"];
+       	onClickHideAndShow(aEts,aEth);
+
+       	var jObject = {};
+       	jObject.mark =	$("#getSearchMark").val();
+       	jObject.model = $("#getSearchModel").val();
+       	jObject.transmission = $("#getSearchTransmission").val();
+       	jObject.fuel = $("#getSearchFuel").val();
+       	jObject.priceFrom = $("#getSearchPriceFrom").val();
+       	jObject.priceUntil = $("#getSearchPriceUntil").val();
+       	jObject.kmFrom = $("#getSearchKmFrom").val();
+       	jObject.kmFUntil = $("#getSearchKmUntil").val();
+       	for(var prop in jObject){
+       		if(jObject.hasOwnProperty(prop)){
+       			if(jObject[prop] == "all"){
+       				delete jObject[prop];
+       			};
+       		};
+       	};
+      	var sObject = JSON.stringify(jObject);
+       	$.ajax({
+       		"url":"API/showCars.php",
+       		"method":"POST",
+       		"cache":false,
+       		"dataType":"TEXT",
+       		"data":"data="+sObject
+       	}).done(function(sData){
+       		aOfTemporaryCars = JSON.parse(sData);
+       		searchLocation(aOfTemporaryCars);
+       	}).error(function(sData){
+       		console.log(sData);
+       	});
+       });
+       // ------ ---- ----- ----- <<<<<<< CarSearch >>>>>>> ------ ---- ----- ----------- ---- ----- ----- <<<<<<< CarSearch >>>>>>> ------ ---- ----- -----
+
+
+
+
+       $(document).on("click","#accountButton",function(){
+       	var aEth = ["lblFirstMenu","lblMap","lblSeparatorOne","lblSecondMenu","lblThirdMenu","lblSeparatorTwo","lblSeparatorThree","lblSeparatorFour","lblFourthMenu","lblLogin"];
+       	var aEts = ["lblUser"];
+
+       	ReadUser();
+       	setTimeout(function(){
+       		if(user.status == "success"){
+       			onClickHideAndShow(aEts,aEth);
+       			PopulateTheWeb(user);
+       		}else{
+       			aEth = ["lblFirstMenu","lblMap","lblSeparatorOne","lblSecondMenu","lblThirdMenu","lblSeparatorTwo","lblSeparatorThree","lblSeparatorFour","lblFourthMenu","lblUser"];
+       			aEts = ["lblLogin"];
+       			onClickHideAndShow(aEts,aEth);
+       		}
+       	},1000);
+
+       	
+       });
+
+       $(document).on("click","#runLogin", function(){
+       	var userNameInput = $("#txtUserNameLoginInput").val();
+       	var userPassInput = $("#txtUserPassLoginInput").val();
+       	var jObject = {};
+       	jObject.name = userNameInput;
+       	jObject.pass = userPassInput;
+       	var sObject = JSON.stringify(jObject);
+       	// console.log("API/login.php?userData="+sObject);
+       	$.getJSON("API/login.php?userData="+sObject, function(jData){
+       		if(jData.status == "ok"){
+       			console.log("Correct");
+       			localStorage.setItem("userlogged", JSON.stringify(jData));
+		       	var aEth = ["lblLogin"];
+		       	var aEts = ["lblUser"];
+		       	onClickHideAndShow(aEts,aEth);
+       		}else{
+       			console.log("incorrect");
+       			localStorage.setItem("userlogged", JSON.stringify(jData));
+       		}
+       	});
+       });
+
+
+
+
+
+    </script>
+
+  
+</html>

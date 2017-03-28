@@ -1,0 +1,676 @@
+@import url('https://fonts.googleapis.com/css?family=Dosis');
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+a{
+  font-family: 'Dosis', sans-serif;
+  color: inherit;
+  text-decoration: none;
+}
+nav{
+  width: 100%;
+  height: 50px;
+  background-color: #FAFAFA;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+nav ul{
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+}
+nav ul div{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 45%;
+}
+nav ul div li{
+  display: flex;
+}
+#map{
+  width:100%;
+  height: 100%;
+}
+.map{
+  display: flex;
+  justify-content: center;
+  background-color: #EEEEEE;
+  width: 100%;
+  height: 600px;
+}
+.firstMenu{
+  font-family: 'Dosis', sans-serif;
+  background-image: url("../Image/firstMenu3.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+  width: 100%;
+}
+.secondMenu{
+  font-family: 'Dosis', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 1250px;
+  width: 100%;
+}
+.thirdMenu{
+  font-family: 'Dosis', sans-serif;
+  background-image: url("../Image/footer2.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  width: 100%;
+}
+.fourthMenu{
+  font-family: 'Dosis', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 450px;
+  width: 100%;
+}
+footer {
+  font-family: 'Dosis', sans-serif;
+  background-image: url("../Image/footer3.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 650px;
+  width: 100%;
+}
+.footerContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #FAFAFA;
+  height: 200px;
+  width: 300px;
+}
+.footerCenterContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #FAFAFA;
+  height: 200px;
+  width: 400px;
+}
+.socialMedia{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  max-height: 50px;
+  width: 150px;
+}
+.centerFooter{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  max-height: 50px;
+  width: 350px;
+}
+.smallImg{
+  max-height: 45px;
+}
+.centeringBox{
+  display: flex;
+  width: 80%;
+  height: 400px;
+  justify-content: space-around;
+  align-items: center;
+}
+.centeringSmallBox{
+  display: flex;
+  width: 200px;
+  height: 80px;
+  justify-content: space-around;
+  align-items: center;
+}
+.centeringListBox{
+  width: 65%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.searchMenu{
+  width:600px;
+  height: 400px;
+  background-color: #FAFAFA;
+  margin-left: 8%;
+  box-shadow: 0px 0px 20px 3px black;
+}
+.lblLoginBox{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:800px;
+  height: 500px;
+  background-color: #FAFAFA;
+  box-shadow: 0px 0px 10px 1px black;
+  border: 0;
+  border-radius: 0.5em;
+}
+.buyMenu{
+  width:300px;
+  height: 400px;
+  margin-left: 10%;
+  color: #FAFAFA;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.inputStyle{
+  width:150px;
+  height: 20px;
+  outline: none;
+  border-radius: 0,5em;
+  font-size: 12px;
+}
+
+
+
+.centeringModel{
+  display: flex;
+  width: 100%;
+}
+.centeringModelInput{
+  display: flex;
+  align-items: center;
+  align-content: space-around;
+  justify-content: center;
+  width: 100%;
+  flex-direction: column;
+}
+.centeringModelSmall{
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 67%;
+}
+.seachModel{
+  height: 100px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  border: none;
+  background-color: #E0E0E0;
+  box-shadow: inset 0px 0px 2px 0px black;
+}
+.seachModel:focus{
+  outline: none;
+  box-shadow: none;
+  background-color: #FAFAFA;
+}
+.seachModel:active{
+  outline: none;
+  box-shadow: none;
+  background-color: #FAFAFA;
+}
+.inputSearchModel{
+  display: flex;
+  width: 100%;
+  height: calc(100% - 100px);
+}
+.dualInput{
+  display: flex;
+  height: 75px;
+  width: 210px;
+  justify-content: space-between;
+}
+.logo{
+  height: auto;
+  width: auto;
+  max-height: 20px;
+}
+.languageFlag{
+  height: auto;
+  width: auto;
+  max-height: 15px;
+}
+.selectOption{ 
+  height: 30px;
+  width: 150px;
+}
+.selectSmallOption{
+  height: 30px;
+  width: 100px;
+}
+.buttonStyle{
+  cursor:pointer;
+  outline: none;
+  font-family: 'Dosis', sans-serif;
+  color: #FAFAFA;
+  background-color: #039BE5;
+  border: 0;
+  border-radius: 0.25em;
+  border: none;
+  font-size: 18px;
+  height: 40px;
+  width: 120px;
+}
+.smButtonStyle{
+  cursor:pointer;
+  font-family: 'Dosis', sans-serif;
+  color: #FAFAFA;
+  outline: none;
+  border: 0;
+  border-radius: 0.25em;
+  background-color: #039BE5;
+  border: none;
+  font-size: 12px;
+  height: 35px;
+  width: 90px;
+}
+.buttonStyle:hover{
+  outline: none;
+  background-color: #000000;
+}
+.smButtonStyle:hover{
+  outline: none;
+  background-color: #000000;
+}
+.buttonStyle:active{
+  font-size: 16px;
+  width: 115px;
+  height: 37px;
+  transition: width 0.2s, height 0.2s, font-size 0.2s;
+}
+.smButtonStyle:active{
+  font-size: 12px;
+  width: 105px;
+  height: 33px;
+  transition: width 0.2s, height 0.2s, font-size 0.2s;
+}
+.separator{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 50px;
+  margin-top: 0px;
+  width: 100%;
+}
+.topText{
+  margin:0px !important;
+}
+.justifyContent{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.marginTop{
+  margin-top: 5%;
+}
+.marginBottom{
+  display: flex;
+  margin-bottom: 10%;
+}
+.separator div {
+  font-family: 'Dosis', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 35%;
+}
+.mediumAnnounce{
+  box-shadow: 0px 0px 1px black;
+  display: flex;
+  justify-content: flex-start;
+  align-content: center;
+  height: 200px;
+  width: 400px;
+}
+.mediumImageScale{
+  width: 100%;
+  margin-top: 5%;
+}
+.maSeparatorImage{
+  margin: 5px;
+  width: 550px;
+}
+.maSeparatorText, h4, p{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 5px;
+  width: auto;
+}
+.maTitle{
+  color: #2796D3;  
+}
+.maPrice{
+  color: #E64A19;  
+}
+.buttonStyleRed{
+  cursor:pointer;
+  outline: none;
+  font-family: 'Dosis', sans-serif;
+  color: #FAFAFA;
+  background-color: #E64A19;
+  border: 0;
+  border-radius: 0.25em;
+  border: none;
+  font-size: 18px;
+  height: 40px;
+  width: 120px;
+}
+.buttonStyleRed:hover{
+  outline: none;
+  background-color: #000000;
+}
+.buttonStyleRed:active{
+  font-size: 16px;
+  width: 115px;
+  height: 37px;
+  transition: width 0.2s, height 0.2s, font-size 0.2s;
+}
+h4{
+  font-size: 18px;
+}
+h5{
+  margin:0px;
+  margin-top: 10%;
+}
+p{
+  font-size: 14px;
+}
+.bigP{
+  font-size: 18px;
+}
+.bigH3{
+  font-size: 30px;
+}
+.bigH1{
+  font-size: 80px;
+}
+.maxi{
+  font-size: 28px;
+}
+.medi{
+  font-size: 20px;
+}
+.overBlack{
+  color: #FAFAFA;
+}
+.dealerDisplay{
+  box-shadow: 0px 0px 1px black;
+  font-family: 'Dosis', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 450px;
+  width: 100%;
+}
+.first{
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  height: 450px;
+}
+.second{
+  display: flex;
+  width: 100%;
+  height:200px;
+}
+.dDSeparatorImage{
+  margin: 5px;
+  width: 1650px;
+}
+.dDSeparatorText, h4, p{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 5px;
+  width: auto;
+}
+.largeImageScale{
+  width: 100%;
+}
+.green{
+  background-color: green;
+}
+.firstCarousel{
+  display: flex;
+  width: 100%;
+  height: 300px;
+}
+
+
+@media (min-width: 850px){
+  nav ul div{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 33%;
+  }
+  footer{
+    background-image: url("../Image/footer2.jpg");
+    height: 300px;
+    flex-direction: row;
+  }
+  .firstMenu{
+  background-image: url("../Image/firstMenu2.png");
+  }
+  .centeringListBox{
+    width: 100%;
+  }
+  .secondMenu{
+    height: 650px;
+  }
+}
+@media (min-width: 1200px){
+  .thirdMenu{
+    height: 150px;
+  }
+  .separator div {
+    font-family: 'Dosis', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 25%;
+  }
+  .secondMenu{
+    font-family: 'Dosis', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 750px;
+    width: 100%;
+  }
+  nav ul div{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 23%;
+  }
+  footer{
+    background-image: url("../Image/footer.png"); 
+    flex-direction: row;
+    height: 200px;
+  }
+  .firstMenu{
+    background-image: url("../Image/footer2.jpg");
+  }
+  .centeringListBox{
+    width: 70%;
+  }
+}
+@media (min-width: 1550px){
+  .thirdMenu{
+    height: 180px;
+  }
+  nav ul div{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 18%;
+  }
+  .separator {
+    height: 80px;
+  }
+  .secondMenu{
+    font-family: 'Dosis', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 650px;
+    width: 100%;
+  }
+  footer{
+    height: 250px;
+  }
+  .firstMenu{
+  background-image: url("../Image/firstMenu.png");
+}
+}
+@media (min-width: 1862px){
+  .thirdMenu{
+    background-image: url("../Image/thirdMenu.png");
+    height: 200px;
+  }
+  .secondMenu{
+    font-family: 'Dosis', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 440px;
+    width: 100%;
+  }
+}
+
+/* Carousel */
+.wrap {
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+  left: -100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  transform: translateX(100%);
+}
+@media (min-width: 10em) {
+  .carousel {
+    left: -50%;
+    transform: translateX(50%);
+  }
+}
+@media (min-width: 40em) {
+  .carousel {
+    left: -22%;
+    transform: translateX(20%);
+  }
+}
+
+.carousel.is-reversing {
+  transform: translateX(-100%);
+}
+@media (min-width: 30em) {
+  .carousel.is-reversing {
+    transform: translateX(-50%);
+  }
+}
+@media (min-width: 40em) {
+  .carousel.is-reversing {
+    transform: translateX(-20%);
+  }
+}
+
+.carousel.is-set {
+  transform: none;
+  transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.carousel-seat {
+  flex: 1 0 100%;
+  order: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 30em) {
+  .carousel-seat {
+    flex-basis: 50%;
+  }
+}
+@media (min-width: 40em) {
+  .carousel-seat {
+    flex-basis: 14%;
+  }
+}
+
+.carousel-seat.is-ref {
+  order: 1;
+}
+
+h2 {
+  font-family: 'Dosis', sans-serif;
+  font-size: 24px;
+  font-weight: normal;
+  margin: 0;
+  padding: 0.3em 0;
+  text-align: center;
+}
+h5{
+  font-family: 'Dosis', sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  margin: 0;
+  padding: 0.3em 0;
+  text-align: center;
+}
+
+.controls {
+  padding: 2em;
+  text-align: center;
+}
+.controls button {
+  background: #039BE5;
+  border: 0;
+  border-radius: 0.25em;
+  color: #eee;
+  padding: 0.5em 1em;
+}
+.controls button:hover, .controls button:focus {
+  outline: none;
+  background: #000000;
+}
+.carouselImg{
+  max-height: 260px;
+}
+.carouselMinImg{
+  max-height: 100px;
+}
+.carousel-seat a {
+  margin-top:1px;
+}
