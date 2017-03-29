@@ -864,7 +864,7 @@
 				tempArray = array;
 				for(var i = 0; i < array.length ; i++){
 					tempI = i;
-					$.getJSON("https://maps.googleapis.com/maps/api/geocode/json?address="+array[i].adress+"&key=AIzaSyCGbjiZrmDQb01scZIUSx6vmszEXVz4QA4",function(jData){
+					$.getJSON("https://maps.googleapis.com/maps/api/geocode/json?address="+array[i].adress+"&key=..Input google Key..",function(jData){
 						tempPosition = jData.results[0].geometry.location;
 					}).done(function(jData){
 						tempArray[tempI].cordonatesLat = tempPosition.lat;
