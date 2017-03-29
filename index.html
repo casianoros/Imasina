@@ -36,31 +36,31 @@
 	  					<div class="centeringModelInput" id="lblRegisterInputOne" style="display: none">
 	  						<h4>Register</h4><br>
 	  						<p>First Name</p>
-	  						<input class="inputStyle" id="txtUserInput" type="text" placeholder="Casian">
+	  						<input class="inputStyle" id="txtFirstNameReg" type="text" placeholder="Casian">
 	  						<p>Last Name</p>
-	  						<input class="inputStyle" id="txtUserInput" type="text" placeholder="Oros">
+	  						<input class="inputStyle" id="txtLastNameReg" type="text" placeholder="Oros">
 	  						<p>Email adress</p>
-	  						<input class="inputStyle" id="txtUserInput" type="text" placeholder="example@kea.dk">
+	  						<input class="inputStyle" id="txtEmailReg" type="text" placeholder="example@kea.dk">
 	  						<p>Adress</p>
-	  						<input class="inputStyle" id="txtUserInput" type="text" placeholder="Ramlosevej 32">
+	  						<input class="inputStyle" id="txtAdressReg" type="text" placeholder="Ramlosevej 32">
 	  						<br>
 	  						<button class="smButtonStyle" id="backFromRegisterOrLogin">Back</button>
 	  					</div>
 
 	  					<div class="centeringModelInput" id="lblRegisterInputTwo" style="display: none"><br><br><br>
 	  						<p>City</p>
-	  						<input class="inputStyle" id="txtUserInput" type="text" placeholder="example@kea.dk">
+	  						<input class="inputStyle" id="txtCityReg" type="text" placeholder="example@kea.dk">
 	  						<p>Country</p>
-	  						<select name="country" class="selectOption">
+	  						<select name="country" id="txtCountryReg" class="selectOption">
 								  <option value="romania">Romania</option>
 								  <option value="denmark">Denmark</option>
 								</select>
 	  						<p>Phone number</p>
-	  						<input class="inputStyle" id="txtUserInput" type="text" placeholder="44221421">
+	  						<input class="inputStyle" id="txtPhoneReg" type="text" placeholder="44221421">
 	  						<p>Dealer YES/NO</p>
-	  						<input id="txtUserInput" type="checkbox">
+	  						<input id="txtDealerReg" type="checkbox" checked="checked">
 	  						<br>
-	  						<button class="buttonStyleRed">Register</button>
+	  						<button class="buttonStyleRed" id="userRegisterBtn">Register</button>
 	  					</div>
 
 	  					<div class="centeringModelInput" id="lblLoginBoxInputOne" style="display: none">
@@ -646,7 +646,7 @@
 	</body>
 
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGbjiZrmDQb01scZIUSx6vmszEXVz4QA4&callback=initMap"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=... key ...&callback=initMap"></script>
     
 
     <script>
@@ -863,7 +863,7 @@
 				tempArray = array;
 				for(var i = 0; i < array.length ; i++){
 					tempI = i;
-					$.getJSON("https://maps.googleapis.com/maps/api/geocode/json?address="+array[i].adress+"&key=..Input google Key..",function(jData){
+					$.getJSON("https://maps.googleapis.com/maps/api/geocode/json?address="+array[i].adress+"&key=... key ....",function(jData){
 						tempPosition = jData.results[0].geometry.location;
 					}).done(function(jData){
 						tempArray[tempI].cordonatesLat = tempPosition.lat;
@@ -900,19 +900,16 @@
        ReadUser();
 
        function PopulateTheWeb(user){
-       	var temp;
-       	temp = $("#popFName").text();
+       	$("#userNameChange").empty();
+       	$("#userNameChange").text(user.fname);
        	$("#popFName").empty();
-       	$("#popFName").text(temp+": "+user.fname);
-       	temp = $("#popLName").text();
+       	$("#popFName").text("First Name: "+user.fname);
        	$("#popLName").empty();
-       	$("#popLName").text(temp+": "+user.lname);
-       	temp = $("#popAdress").text();
+       	$("#popLName").text("Last Name: "+user.lname);
        	$("#popAdress").empty();
-       	$("#popAdress").text(temp+": "+user.adress);
-       	temp = $("#popEmail").text();
+       	$("#popAdress").text("User Adress: "+user.adress);
        	$("#popEmail").empty();
-       	$("#popEmail").text(temp+": "+user.email);
+       	$("#popEmail").text("User Email: "+user.email);
        }
 
        // ------ ---- ----- ----- <<<<<<< EVENTS >>>>>>> ------ ---- ----- ----------- ---- ----- ----- <<<<<<< EVENTS >>>>>>> ------ ---- ----- -----
@@ -923,11 +920,13 @@
        	onClickHideAndShow(aEts,aEth);
        });
        $(document).on("click","#btnOpenLogin",function(){
-       	if(localStorage.userlogged){
-	       	var aEth = ["lblLogin"];
-	       	var aEts = ["lblUser"];
-	       	onClickHideAndShow(aEts,aEth);
-       	}else{
+       		ReadUser();
+       		if(user.status == "success"){
+       			PopulateTheWeb(user);	       
+       			var aEth = ["lblLogin"];
+	       		var aEts = ["lblUser"];
+	       		onClickHideAndShow(aEts,aEth);
+       		}else{
 	       	var aEth = ["loginChoser"];
 	       	var aEts = ["lblLoginBoxInputOne","lblLoginBoxInputTwo"];
 	       	onClickHideAndShow(aEts,aEth);
@@ -1089,12 +1088,15 @@
        	var sObject = JSON.stringify(jObject);
        	// console.log("API/login.php?userData="+sObject);
        	$.getJSON("API/login.php?userData="+sObject, function(jData){
-       		if(jData.status == "ok"){
+       		if(jData.status == "success"){
        			console.log("Correct");
+       			PopulateTheWeb(jData);
        			localStorage.setItem("userlogged", JSON.stringify(jData));
-		       	var aEth = ["lblLogin"];
-		       	var aEts = ["lblUser"];
-		       	onClickHideAndShow(aEts,aEth);
+		       	setTimeout(function(){
+		       		var aEth = ["lblLogin"];
+		       		var aEts = ["lblUser"];
+		       		onClickHideAndShow(aEts,aEth);
+		       	},1000);
        		}else{
        			console.log("incorrect");
        			localStorage.setItem("userlogged", JSON.stringify(jData));
@@ -1103,7 +1105,28 @@
        });
 
 
-
+       $(document).on("click","#userRegisterBtn", function(){
+       	var userFirstName = $("#txtFirstNameReg").val();
+       	var userLastName = $("#txtLastNameReg").val();
+       	var userEmail = $("#txtEmailReg").val();
+       	var userAdress = $("#txtAdressReg").val();
+       	var userCity = $("#txtCityReg").val();
+       	var userCountry = $("#txtCountryReg").val();
+       	var userPhone = $("#txtPhoneReg").val();
+       	var dealerReg = $("#txtDealerReg").is(":checked");
+       	console.log(userFirstName,userLastName,userEmail,userAdress,userCity,userCountry,userPhone,dealerReg); 
+       	jObject = {};
+       	jObject.status = "success";
+       	jObject.fname = userFirstName;
+       	jObject.lname = userLastName;
+       	jObject.email = userEmail;
+       	jObject.adress = userAdress;
+       	jObject.city = userCity;
+       	jObject.country = userCountry;
+       	jObject.phone = userPhone;
+       	jObject.dealer = dealerReg;
+       	console.log(jObject);
+       })
 
 
     </script>
